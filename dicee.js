@@ -3,6 +3,10 @@ let images = ["images/dice1.png","images/dice2.png","images/dice3.png","images/d
 document.querySelector(".btn").addEventListener("click",function(){
     let num1 = Math.floor(Math.random()*6)
     let num2 = Math.floor(Math.random()*6)
+    
+    document.querySelector(".img1").src=images[num1]
+    document.querySelector(".img2").src=images[num2]
+    
     if(num1===num2){
         document.querySelector("h1").textContent="Draw!"
     }
@@ -12,6 +16,5 @@ document.querySelector(".btn").addEventListener("click",function(){
     else{
         document.querySelector("h1").textContent="Player 2 Wins!🚩"
     }
-    document.querySelector(".img1").src=images[num1]
-    document.querySelector(".img2").src=images[num2]
+ 
 })
